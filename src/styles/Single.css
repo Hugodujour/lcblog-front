@@ -12,3 +12,15 @@ img {
 .markdown-pad p {
   padding-bottom: 28px;
 }
+
+.markdown-pad img {
+  width: 50%;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .markdown-pad img {
+    width: 100%;
+  }
+}
