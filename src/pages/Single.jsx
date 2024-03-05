@@ -71,7 +71,9 @@ export function Single({ postId }) {
               </Button>
             )}
             <img src={post.data.picture} alt="" className="img-fluid  my-3" />
-            <Markdown className="markdown">{post.data.body}</Markdown>
+            <Markdown className="markdown markdown-pad">
+              {post.data.body}
+            </Markdown>
 
             {isEditing && (
               <EditPostModal

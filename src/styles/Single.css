@@ -8,3 +8,7 @@ img {
   margin-right: auto;
   width: 100%;
 }
+
+.markdown-pad p {
+  padding-bottom: 28px;
+}
