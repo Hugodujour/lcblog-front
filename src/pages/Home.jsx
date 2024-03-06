@@ -117,7 +117,7 @@ export function Home() {
         category={data.data[0].categories[0]}
         texte="L&C Vins"
         date={forma}
-        href={`#post:${data.data[0].id}`}
+        href={`#:${data.data[0].slug}`}
       />
 
       <div className="d-flex">
@@ -147,7 +147,7 @@ export function Home() {
                           {shortenedDescription}
                         </Markdown>
                       }
-                      href={`#post:${post.id}`}
+                      href={`#:${post.slug}`}
                       date={dateFormatted}
                       texte="L&C Vins"
                       category={post.categories[0]}

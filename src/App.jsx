@@ -35,7 +35,7 @@ function getPageContent(page, param) {
   if (page === "home") {
     return <Home />;
   }
-  if (page === "post") {
+  if (page === "") {
     return <Single postId={param} />;
   }
   if (page === "create") {

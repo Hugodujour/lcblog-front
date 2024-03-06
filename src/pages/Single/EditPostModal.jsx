@@ -97,7 +97,15 @@ export function EditPostModal({ post, onClose, onSave }) {
       })
       .then((data) => {
         setLoading(false);
-        onSave(data);
+        // Vérifier si le titre a changé
+        if (data.data.title !== post.data.title) {
+          // Rediriger l'utilisateur vers une nouvelle page avec le slug du nouvel article
+          window.location.href = `/#:${data.data.slug}`;
+          onSave(data);
+        } else {
+          // Sinon, exécuter la fonction onSave normalement
+          onSave(data);
+        }
       })
       .catch((error) => {
         console.error("There was an error!", error);
