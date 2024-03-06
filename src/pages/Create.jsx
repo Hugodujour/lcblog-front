@@ -23,13 +23,15 @@ export function Create({ onSave }) {
     const formData = new FormData(e.target);
     const objectData = Object.fromEntries(formData.entries());
 
+    const cleanedTitle = objectData.title.replace(/[^\w\s?!À-ÿ]/gi, "");
+
     // Les catégories sélectionnées
     const selectedCategories = categories.filter(
       (category) => objectData[category]
     );
 
     const requestBody = {
-      title: objectData.title,
+      title: cleanedTitle,
       body: objectData.body,
       picture: objectData.picture,
       categories: selectedCategories, // Utiliser les catégories sélectionnées

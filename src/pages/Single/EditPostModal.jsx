@@ -64,15 +64,18 @@ export function EditPostModal({ post, onClose, onSave }) {
     const formData = new FormData(e.target);
     const objectData = Object.fromEntries(formData.entries());
 
+    // Nettoyer le titre en retirant tous les caractères spéciaux
+    const cleanedTitle = objectData.title.replace(/[^\w\s?!À-ÿ]/gi, "");
+
     const selectedCategories = categories.filter(
       (category) => objectData[category]
-    ); // Filtrer les catégories sélectionnées
+    );
 
     const requestBody = {
-      title: objectData.title,
+      title: cleanedTitle,
       body: objectData.body,
       picture: objectData.picture,
-      categories: selectedCategories, // Utiliser les catégories sélectionnées
+      categories: selectedCategories,
     };
 
     fetch(`${adress}/api/articles/${post.data.id}`, {
