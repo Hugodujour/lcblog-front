@@ -9,11 +9,14 @@ img {
   width: 100%;
 }
 
-.markdown-pad p {
+.markdown-pad p,
+.markdown-pad ul {
   padding-bottom: 28px;
   font-size: 21px;
   font-weight: 300;
+  color: black;
 }
+
 .markdown-pad h2 {
   font-size: 28px;
   font-weight: 900;
