@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Alert } from "../components/Alert.jsx";
 import "../styles/Edit.css";
 import { adress } from "../utils/adress.js";
+import { regex } from "../utils/regex.js";
 
 export function Create({ onSave }) {
   const [error, setError] = useState(null);
@@ -23,7 +24,7 @@ export function Create({ onSave }) {
     const formData = new FormData(e.target);
     const objectData = Object.fromEntries(formData.entries());
 
-    const cleanedTitle = objectData.title.replace(/[^\w\s?!À-ÿ]/gi, "");
+    const cleanedTitle = objectData.title.replace(regex, "");
 
     // Les catégories sélectionnées
     const selectedCategories = categories.filter(

@@ -4,6 +4,7 @@ import { Input } from "../../components/Input.jsx";
 import { useState } from "react";
 import { Alert } from "../../components/Alert.jsx";
 import { adress } from "../../utils/adress.js";
+import { regex } from "../../utils/regex.js";
 
 export function EditPostModal({ post, onClose, onSave }) {
   const [error, setError] = useState(null);
@@ -65,7 +66,7 @@ export function EditPostModal({ post, onClose, onSave }) {
     const objectData = Object.fromEntries(formData.entries());
 
     // Nettoyer le titre en retirant tous les caractères spéciaux
-    const cleanedTitle = objectData.title.replace(/[^\w\s?!À-ÿ]/gi, "");
+    const cleanedTitle = objectData.title.replace(regex, "");
 
     const selectedCategories = categories.filter(
       (category) => objectData[category]
