@@ -11,6 +11,12 @@ img {
 
 .markdown-pad p {
   padding-bottom: 28px;
+  font-size: 21px;
+  font-weight: 300;
+}
+.markdown-pad h2 {
+  font-size: 28px;
+  font-weight: 900;
 }
 
 .markdown-pad img {
