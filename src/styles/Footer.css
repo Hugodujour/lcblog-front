@@ -33,6 +33,7 @@
   }
 }
 
-.grey {
+.grey,
+.grey a {
   color: #999;
 }

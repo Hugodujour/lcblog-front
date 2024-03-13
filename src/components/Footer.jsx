@@ -27,9 +27,16 @@ export function Footer() {
         </div>
 
         <p className="text-center grey px-3">
-          © L&C Vins - SARL au capital de 50.000,00 € - 809 960 081 RCS
-          Bordeaux - 185 Bd du Président Wilson, 33200 Bordeaux - Politique de
-          confidentialité
+          <a href="/#login">Connexion - </a>© L&C Vins - SARL au capital de
+          50.000,00 € - 809 960 081 RCS Bordeaux - 185 Bd du Président Wilson,
+          33200 Bordeaux -{" "}
+          <a
+            href="https://docs.google.com/document/d/1rVBsRSOFh1sKNZEuhxJ0yS0KDNQyNfOUIIUqZsVEEw8/edit#heading=h.6kj0bldp451x"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Politique de confidentialité
+          </a>
         </p>
       </footer>
     </div>
