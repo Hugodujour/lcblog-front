@@ -40,7 +40,7 @@ export function Header({ page }) {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="https://lcvins.com/fr/">
-                L&C Vins
+                🔗L&C Vins
               </a>
             </li>
           </ul>
